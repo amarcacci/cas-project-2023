@@ -1,0 +1,956 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# Generation of Mock CIS JSON files\nThis notebook will take 4 CIS result files stored in S3 and generate files for a given inventory for some weeks\n",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Generation of Mock CIS JSON files</h1>\n<p>This notebook will take 4 CIS result files stored in S3 and generate files for a given inventory for some weeks</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046201_1458407215",
+      "id": "20230919-123140_1186192812",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:193"
+    },
+    {
+      "text": "%md\n## Read the files in the bucket `s3a://test-data` and explode the rules ",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Read the files in the bucket <code>s3a://test-data</code> and explode the rules</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046202_1783399861",
+      "id": "20230919-123140_1658489472",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:194"
+    },
+    {
+      "text": "%pyspark\nfrom random import random\nfrom jinja2 import Template\nimport json\nimport datetime",
+      "user": "admin",
+      "dateUpdated": "2023-09-23T13:35:03+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046202_197099806",
+      "id": "20230919-123140_170734142",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "dateStarted": "2023-09-23T13:35:03+0000",
+      "dateFinished": "2023-09-23T13:35:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:195"
+    },
+    {
+      "text": "%pyspark\ndata_json = spark.read.json(\"s3a://test-data/*\", multiLine=True)\n#data_json.show()\n\ndf_final = data_json \\\n    .withColumn(\"rules_explode\", explode(\"rules\")) \\\n    .withColumn(\"rule_id\", col(\"rules_explode.rule-id\")) \\\n    .withColumn(\"rule_title\", col(\"rules_explode.rule-title\")) \\\n    .withColumn(\"rule_result\", col(\"rules_explode.result\")) \\\n    .drop(\"rules\", \"rules_explode\")",
+      "user": "admin",
+      "dateUpdated": "2023-09-23T13:39:05+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://zeppelin:4050/jobs/job?id=73",
+              "$$hashKey": "object:1064"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046202_924485598",
+      "id": "20230919-123140_1016407921",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "dateStarted": "2023-09-23T13:39:05+0000",
+      "dateFinished": "2023-09-23T13:39:08+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:196"
+    },
+    {
+      "text": "%md\n## Create a list of rows containing all test per OS",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Create a list of rows containing all test per OS</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046202_1286399155",
+      "id": "20230919-123140_1652789735",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:197"
+    },
+    {
+      "text": "%pyspark\nparam_windows = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark\").select(\"benchmark-id\", \"benchmark-title\", \"benchmark-version\", \"profile-id\", \"profile-title\", \"score\").limit(1).collect()[0]\nparam_ol7 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark\").select(\"benchmark-id\", \"benchmark-title\", \"benchmark-version\", \"profile-id\", \"profile-title\", \"score\").limit(1).collect()[0]\nparam_ol8 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_8_Benchmark\").select(\"benchmark-id\", \"benchmark-title\", \"benchmark-version\", \"profile-id\", \"profile-title\", \"score\").limit(1).collect()[0]\nparam_rhel9 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark\").select(\"benchmark-id\", \"benchmark-title\", \"benchmark-version\", \"profile-id\", \"profile-title\", \"score\").limit(1).collect()[0]\ncontrols_windows = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark\").select(\"rule_id\", \"rule_title\").collect()\ncontrols_ol7 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark\").select(\"rule_id\", \"rule_title\").collect()\ncontrols_ol8 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_8_Benchmark\").select(\"rule_id\", \"rule_title\").collect()\ncontrols_rhel9 = df_final.filter(col(\"benchmark-id\") == \"xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark\").select(\"rule_id\", \"rule_title\").collect()",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046202_2116501912",
+      "id": "20230919-123140_1256434347",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:198"
+    },
+    {
+      "text": "%pyspark\nprint(param_windows['benchmark-id'])",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1529804537",
+      "id": "20230919-123140_700239115",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:199"
+    },
+    {
+      "text": "%md\n## Inventory\nHere 4 types of inventory assets based on operating system. Each host has a quality parameter [0-1] which gives the probability that their cotnrols are pass (1 = 100% probability, 0.3 = 30% probability check pass)",
+      "user": "admin",
+      "dateUpdated": "2023-09-21T10:45:10+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Inventory</h2>\n<p>Here 4 types of inventory assets based on operating system. Each host has a quality parameter [0-1] which gives the probability that their cotnrols are pass (1 = 100% probability, 0.3 = 30% probability check pass)</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695293002730_2005015069",
+      "id": "paragraph_1695293002730_2005015069",
+      "dateCreated": "2023-09-21T10:43:22+0000",
+      "dateStarted": "2023-09-21T10:45:10+0000",
+      "dateFinished": "2023-09-21T10:45:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:200"
+    },
+    {
+      "text": "%pyspark\ninventory_windows = [\n    {\n        'server': 's0001',\n        'quality': 1\n    },\n    {\n        'server': 's0002',\n        'quality': 1\n    },\n    {\n        'server': 's0003',\n        'quality': 1\n    },\n    {\n        'server': 's0004',\n        'quality': 1\n    },\n    {\n        'server': 's0005',\n        'quality': 1\n    },\n    {\n        'server': 's0006',\n        'quality': 1\n    },\n    {\n        'server': 's0006',\n        'quality': 1\n    },\n    {\n        'server': 's0007',\n        'quality': 1\n    },\n    {\n        'server': 's0008',\n        'quality': 1\n    },\n    {\n        'server': 's0009',\n        'quality': 0.7\n    }\n    \n]\ninventory_ol7 = [\n    {\n        'server': 's0011',\n        'quality': 0.5\n    },\n    {\n        'server': 's0012',\n        'quality': 1\n    },\n    {\n        'server': 's0013',\n        'quality': 1\n    },\n    {\n        'server': 's0014',\n        'quality': 1\n    },\n    {\n        'server': 's0015',\n        'quality': 1\n    },\n    {\n        'server': 's0016',\n        'quality': 1\n    },\n    {\n        'server': 's0017',\n        'quality': 1\n    },\n    {\n        'server': 's0018',\n        'quality': 0.9\n    },\n    {\n        'server': 's0019',\n        'quality': 0.9\n    }\n]\ninventory_ol8 = [\n    {\n        'server': 's0021',\n        'quality': 1\n    },\n    {\n        'server': 's0022',\n        'quality': 1\n    },\n    {\n        'server': 's0023',\n        'quality': 1\n    },\n    {\n        'server': 's0024',\n        'quality': 1\n    },\n    {\n        'server': 's0025',\n        'quality': 1\n    },\n    {\n        'server': 's0026',\n        'quality': 1\n    },\n    {\n        'server': 's0027',\n        'quality': 1\n    },\n    {\n        'server': 's0028',\n        'quality': 0.9\n    },\n    {\n        'server': 's0029',\n        'quality': 0.9\n    }\n]\ninventory_rhel9 = [\n    {\n        'server': 's0031',\n        'quality': 0.4\n    },\n    {\n        'server': 's0032',\n        'quality': 1\n    },\n    {\n        'server': 's0033',\n        'quality': 1\n    },\n    {\n        'server': 's0034',\n        'quality': 1\n    },\n    {\n        'server': 's0035',\n        'quality': 1\n    },\n    {\n        'server': 's0036',\n        'quality': 1\n    },\n    {\n        'server': 's0037',\n        'quality': 1\n    },\n    {\n        'server': 's0038',\n        'quality': 1\n    },\n    {\n        'server': 's0039',\n        'quality': 1\n    }\n]",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1878774180",
+      "id": "20230919-123140_1007143394",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:201"
+    },
+    {
+      "text": "%md\n## Definition of the quality function",
+      "user": "admin",
+      "dateUpdated": "2023-09-24T11:23:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Definition of the quality function</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695554620449_1508441352",
+      "id": "paragraph_1695554620449_1508441352",
+      "dateCreated": "2023-09-24T11:23:40+0000",
+      "dateStarted": "2023-09-24T11:23:57+0000",
+      "dateFinished": "2023-09-24T11:23:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:202"
+    },
+    {
+      "text": "%pyspark\ndef get_result_check(quality):\n    if random() <= quality:\n        return 'pass'\n    else:\n        return 'fail'",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_698126986",
+      "id": "20230919-123140_1123380012",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:203"
+    },
+    {
+      "text": "%md\n## Definition of the CIS Benchmark template in Jinja2",
+      "user": "admin",
+      "dateUpdated": "2023-09-24T11:25:11+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695554677635_2140536796",
+      "id": "paragraph_1695554677635_2140536796",
+      "dateCreated": "2023-09-24T11:24:37+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:1892",
+      "dateFinished": "2023-09-24T11:25:11+0000",
+      "dateStarted": "2023-09-24T11:25:11+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Definition of the CIS Benchmark template in Jinja2</h2>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%pyspark\ntemplate = Template('''\n{\n    \"server\": \"{{ server }}\",\n    \"date\": \"{{ date }}\",\n    \"benchmark-id\": \"{{ benchmark_id }}\",\n    \"benchmark-title\": \"{{ benchmark_title }}\",\n    \"benchmark-version\": \"{{ benchmark_version }}\",\n    \"profile-id\": \"{{ profile_id }}\",\n    \"profile-title\": \"{{ profile_title }}\",\n    \"score\": \"{{ score }}\",\n    \"rules\": [\n        {% for control in controls %}\n        {\n            \"rule-id\": \"{{ control.rule_id }}\",\n            \"rule-title\": \"{{ control.rule_title }}\",\n            \"result\": \"{{ control.result}}\"\n        }{% if not loop.last %},{% endif %}\n        {% endfor %}\n    ]\n}\n''')",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_406054472",
+      "id": "20230919-123140_1519350791",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:205"
+    },
+    {
+      "text": "%md\n## Generate windows files",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Generate windows files</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_137091854",
+      "id": "20230919-123140_1489370733",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:206"
+    },
+    {
+      "text": "%pyspark\ndef generate_windows_files_on_date(date):\n    for item in inventory_windows:\n        server = item['server']\n        date = date\n        benchmark_id = param_windows['benchmark-id']\n        benchmark_title = param_windows['benchmark-title']\n        benchmark_version = param_windows['benchmark-version']\n        profile_id = param_windows['profile-id']\n        profile_title = param_windows['profile-title']\n        passed = 0\n        failed = 0\n        graded_controls = []\n        for control in controls_windows:\n            rule_title = control['rule_title'].replace('\\\\', \"\\\\\\\\\").replace(\"\\\"\",\"\\\\\\\"\")\n            control_rated = {\n                'rule_id': control['rule_id'],\n                'rule_title': rule_title,\n                'result': get_result_check(item['quality'])\n                }\n            graded_controls.append(control_rated)\n            if control_rated['result'] == 'pass':\n                passed += 1\n            if control_rated['result'] == 'fail':\n                failed += 1   \n        score = (passed/(failed+passed))*100\n        \n        rendered_content = template.render(\n            server=server,\n            date=date,\n            benchmark_id=benchmark_id,\n            benchmark_title = benchmark_title,\n            benchmark_version = benchmark_version,\n            profile_id = profile_id,\n            profile_title = profile_title,\n            score = score,\n            controls = graded_controls\n        )\n        json_content = json.loads(rendered_content)\n        filename = date + \"_\" + server + \".json\"\n        with open(\"/data-transfer/cis/win/\" + filename, 'w') as json_file:\n            json.dump(json_content, json_file, indent=4)\n        print(\"(WIN) File \" + filename + \" generated!\")",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1706267546",
+      "id": "20230919-123140_822100562",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:207"
+    },
+    {
+      "text": "%md\n## Generate Oracle Linux 7 files",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Generate Oracle Linux 7 files</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_178995591",
+      "id": "20230919-123140_93918774",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:208"
+    },
+    {
+      "text": "%pyspark\ndef generate_ol7_files_on_date(date):\n    for item in inventory_ol7:\n        server = item['server']\n        date = date\n        benchmark_id = param_ol7['benchmark-id']\n        benchmark_title = param_ol7['benchmark-title']\n        benchmark_version = param_ol7['benchmark-version']\n        profile_id = param_ol7['profile-id']\n        profile_title = param_ol7['profile-title']\n        passed = 0\n        failed = 0\n        graded_controls = []\n        for control in controls_ol7:\n            rule_title = control['rule_title'].replace('\\\\', \"\\\\\\\\\").replace(\"\\\"\",\"\\\\\\\"\")\n            control_rated = {\n                'rule_id': control['rule_id'],\n                'rule_title': rule_title,\n                'result': get_result_check(item['quality'])\n                }\n            graded_controls.append(control_rated)\n            if control_rated['result'] == 'pass':\n                passed += 1\n            if control_rated['result'] == 'fail':\n                failed += 1   \n        score = (passed/(failed+passed))*100\n        \n        rendered_content = template.render(\n            server=server,\n            date=date,\n            benchmark_id=benchmark_id,\n            benchmark_title = benchmark_title,\n            benchmark_version = benchmark_version,\n            profile_id = profile_id,\n            profile_title = profile_title,\n            score = score,\n            controls = graded_controls\n        )\n        json_content = json.loads(rendered_content)\n        filename = date + \"_\" + server + \".json\"\n        with open(\"/data-transfer/cis/ol7/\" + filename, 'w') as json_file:\n            json.dump(json_content, json_file, indent=4)\n        print(\"(OL7) File \" + filename + \" generated!\")",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1616090444",
+      "id": "20230919-123140_605517262",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:209"
+    },
+    {
+      "text": "%md\n## Generate Oracle Linux 8 Files",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Generate Oracle Linux 8 Files</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_914766714",
+      "id": "20230919-123140_1406583223",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:210"
+    },
+    {
+      "text": "%pyspark\ndef generate_ol8_files_on_date(date):\n    for item in inventory_ol8:\n        server = item['server']\n        date = date\n        benchmark_id = param_ol8['benchmark-id']\n        benchmark_title = param_ol8['benchmark-title']\n        benchmark_version = param_ol8['benchmark-version']\n        profile_id = param_ol8['profile-id']\n        profile_title = param_ol8['profile-title']\n        passed = 0\n        failed = 0\n        graded_controls = []\n        for control in controls_ol8:\n            rule_title = control['rule_title'].replace('\\\\', \"\\\\\\\\\").replace(\"\\\"\",\"\\\\\\\"\")\n            control_rated = {\n                'rule_id': control['rule_id'],\n                'rule_title': rule_title,\n                'result': get_result_check(item['quality'])\n                }\n            graded_controls.append(control_rated)\n            if control_rated['result'] == 'pass':\n                passed += 1\n            if control_rated['result'] == 'fail':\n                failed += 1   \n        score = (passed/(failed+passed))*100\n        \n        rendered_content = template.render(\n            server=server,\n            date=date,\n            benchmark_id=benchmark_id,\n            benchmark_title = benchmark_title,\n            benchmark_version = benchmark_version,\n            profile_id = profile_id,\n            profile_title = profile_title,\n            score = score,\n            controls = graded_controls\n        )\n        json_content = json.loads(rendered_content)\n        filename = date + \"_\" + server + \".json\"\n        with open(\"/data-transfer/cis/ol8/\" + filename, 'w') as json_file:\n            json.dump(json_content, json_file, indent=4)\n        print(\"(OL7) File \" + filename + \" generated!\")",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1416875540",
+      "id": "20230919-123140_1618414413",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:211"
+    },
+    {
+      "text": "%md\n## Generate Red Hat Enterprise Linux 9 Files",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Generate Red Hat Enterprise Linux 9 Files</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046203_1765877406",
+      "id": "20230919-123140_764582355",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:212"
+    },
+    {
+      "text": "%pyspark\ndef generate_rhel9_files_on_date(date):\n    for item in inventory_rhel9:\n        server = item['server']\n        date = date\n        benchmark_id = param_rhel9['benchmark-id']\n        benchmark_title = param_rhel9['benchmark-title']\n        benchmark_version = param_rhel9['benchmark-version']\n        profile_id = param_rhel9['profile-id']\n        profile_title = param_rhel9['profile-title']\n        passed = 0\n        failed = 0\n        graded_controls = []\n        for control in controls_rhel9:\n            rule_title = control['rule_title'].replace('\\\\', \"\\\\\\\\\").replace(\"\\\"\",\"\\\\\\\"\")\n            control_rated = {\n                'rule_id': control['rule_id'],\n                'rule_title': rule_title,\n                'result': get_result_check(item['quality'])\n                }\n            graded_controls.append(control_rated)\n            if control_rated['result'] == 'pass':\n                passed += 1\n            if control_rated['result'] == 'fail':\n                failed += 1   \n        score = (passed/(failed+passed))*100\n        \n        rendered_content = template.render(\n            server=server,\n            date=date,\n            benchmark_id=benchmark_id,\n            benchmark_title = benchmark_title,\n            benchmark_version = benchmark_version,\n            profile_id = profile_id,\n            profile_title = profile_title,\n            score = score,\n            controls = graded_controls\n        )\n        json_content = json.loads(rendered_content)\n        filename = date + \"_\" + server + \".json\"\n        with open(\"/data-transfer/cis/rhel9/\" + filename, 'w') as json_file:\n            json.dump(json_content, json_file, indent=4)\n        print(\"(OL7) File \" + filename + \" generated!\")",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046204_1614541545",
+      "id": "20230919-123140_842277034",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:213"
+    },
+    {
+      "text": "%md\n## Generation of the mock files\nThis script will generate one report per week per inventory asset for the given dates",
+      "user": "admin",
+      "dateUpdated": "2023-09-24T11:25:53+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695554717210_433168023",
+      "id": "paragraph_1695554717210_433168023",
+      "dateCreated": "2023-09-24T11:25:17+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:2003",
+      "dateFinished": "2023-09-24T11:25:54+0000",
+      "dateStarted": "2023-09-24T11:25:53+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Generation of the mock files</h2>\n<p>This script will generate one report per week per inventory asset for the given dates</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%pyspark\nstart_date = datetime.date(2023, 1, 1)\nend_date = datetime.date(2023, 9, 1)\n\ndate_range = []\n\ncurrent_date = start_date\nwhile current_date <= end_date:\n    date_range.append(current_date)\n    current_date += datetime.timedelta(days=7)\n\nfor date in date_range:\n    date_str = date.strftime(\"%Y-%m-%d\")\n    print(\"Generating for date: \" + date_str)\n    generate_windows_files_on_date(date_str)\n    generate_ol7_files_on_date(date_str)\n    generate_ol8_files_on_date(date_str)\n    generate_rhel9_files_on_date(date_str)",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046205_1374584821",
+      "id": "20230919-123140_1460306978",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:214"
+    },
+    {
+      "text": "\n%pyspark\n",
+      "user": "admin",
+      "dateUpdated": "2023-09-20T10:34:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1695206046205_146025259",
+      "id": "20230919-123140_260034797",
+      "dateCreated": "2023-09-20T10:34:06+0000",
+      "status": "READY",
+      "$$hashKey": "object:215"
+    }
+  ],
+  "name": "Generate mock CIS bechmark results",
+  "id": "2JDH4DZVM",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": true,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Generate mock CIS bechmark results"
+}

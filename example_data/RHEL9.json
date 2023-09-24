@@ -1,0 +1,1287 @@
+{
+    "server": "s0003",
+    "date": "2023-09-18",
+    "benchmark-id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark",
+    "benchmark-title": "CIS Red Hat Enterprise Linux 9 Benchmark",
+    "benchmark-version": "1.0.0",
+    "profile-id": "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+    "profile-title": "Level 1 - Server",
+    "score": "95.58",
+    "rules": [
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.1.1_Ensure_mounting_of_squashfs_filesystems_is_disabled",
+            "rule-title": "Ensure mounting of squashfs filesystems is disabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_udf_filesystems_is_disabled",
+            "rule-title": "Ensure mounting of udf filesystems is disabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.2.1_Ensure_tmp_is_a_separate_partition",
+            "rule-title": "Ensure /tmp is a separate partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.2.2_Ensure_nodev_option_set_on_tmp_partition",
+            "rule-title": "Ensure nodev option set on /tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.2.3_Ensure_noexec_option_set_on_tmp_partition",
+            "rule-title": "Ensure noexec option set on /tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.2.4_Ensure_nosuid_option_set_on_tmp_partition",
+            "rule-title": "Ensure nosuid option set on /tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.3.1_Ensure_separate_partition_exists_for_var",
+            "rule-title": "Ensure separate partition exists for /var",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.3.2_Ensure_nodev_option_set_on_var_partition",
+            "rule-title": "Ensure nodev option set on /var partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.3.3_Ensure_nosuid_option_set_on_var_partition",
+            "rule-title": "Ensure nosuid option set on /var partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.4.1_Ensure_separate_partition_exists_for_vartmp",
+            "rule-title": "Ensure separate partition exists for /var/tmp",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.4.2_Ensure_noexec_option_set_on_vartmp_partition",
+            "rule-title": "Ensure noexec option set on /var/tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.4.3_Ensure_nosuid_option_set_on_vartmp_partition",
+            "rule-title": "Ensure nosuid option set on /var/tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.4.4_Ensure_nodev_option_set_on_vartmp_partition",
+            "rule-title": "Ensure nodev option set on /var/tmp partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.5.1_Ensure_separate_partition_exists_for_varlog",
+            "rule-title": "Ensure separate partition exists for /var/log",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.5.2_Ensure_nodev_option_set_on_varlog_partition",
+            "rule-title": "Ensure nodev option set on /var/log partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.5.3_Ensure_noexec_option_set_on_varlog_partition",
+            "rule-title": "Ensure noexec option set on /var/log partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.5.4_Ensure_nosuid_option_set_on_varlog_partition",
+            "rule-title": "Ensure nosuid option set on /var/log partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.6.1_Ensure_separate_partition_exists_for_varlogaudit",
+            "rule-title": "Ensure separate partition exists for /var/log/audit",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.6.2_Ensure_noexec_option_set_on_varlogaudit_partition",
+            "rule-title": "Ensure noexec option set on /var/log/audit partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.6.3_Ensure_nodev_option_set_on_varlogaudit_partition",
+            "rule-title": "Ensure nodev option set on /var/log/audit partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.6.4_Ensure_nosuid_option_set_on_varlogaudit_partition",
+            "rule-title": "Ensure nosuid option set on /var/log/audit partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.7.1_Ensure_separate_partition_exists_for_home",
+            "rule-title": "Ensure separate partition exists for /home",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.7.2_Ensure_nodev_option_set_on_home_partition",
+            "rule-title": "Ensure nodev option set on /home partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.7.3_Ensure_nosuid_option_set_on_home_partition",
+            "rule-title": "Ensure nosuid option set on /home partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.8.1_Ensure_devshm_is_a_separate_partition",
+            "rule-title": "Ensure /dev/shm is a separate partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.8.2_Ensure_nodev_option_set_on_devshm_partition",
+            "rule-title": "Ensure nodev option set on /dev/shm partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.8.3_Ensure_noexec_option_set_on_devshm_partition",
+            "rule-title": "Ensure noexec option set on /dev/shm partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.8.4_Ensure_nosuid_option_set_on_devshm_partition",
+            "rule-title": "Ensure nosuid option set on /dev/shm partition",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.1.9_Disable_USB_Storage",
+            "rule-title": "Disable USB Storage",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.2.1_Ensure_GPG_keys_are_configured",
+            "rule-title": "Ensure GPG keys are configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_gpgcheck_is_globally_activated",
+            "rule-title": "Ensure gpgcheck is globally activated",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.2.3_Ensure_package_manager_repositories_are_configured",
+            "rule-title": "Ensure package manager repositories are configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.2.4_Ensure_repo_gpgcheck_is_globally_activated",
+            "rule-title": "Ensure repo_gpgcheck is globally activated",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.3.1_Ensure_AIDE_is_installed",
+            "rule-title": "Ensure AIDE is installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.3.2_Ensure_filesystem_integrity_is_regularly_checked",
+            "rule-title": "Ensure filesystem integrity is regularly checked",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.3.3_Ensure_cryptographic_mechanisms_are_used_to_protect_the_integrity_of_audit_tools",
+            "rule-title": "Ensure cryptographic mechanisms are used to protect the integrity of audit tools",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.4.1_Ensure_bootloader_password_is_set",
+            "rule-title": "Ensure bootloader password is set",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.4.2_Ensure_permissions_on_bootloader_config_are_configured",
+            "rule-title": "Ensure permissions on bootloader config are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.5.1_Ensure_core_dump_storage_is_disabled",
+            "rule-title": "Ensure core dump storage is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.5.2_Ensure_core_dump_backtraces_are_disabled",
+            "rule-title": "Ensure core dump backtraces are disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.5.3_Ensure_address_space_layout_randomization_ASLR_is_enabled",
+            "rule-title": "Ensure address space layout randomization (ASLR) is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.1_Ensure_SELinux_is_installed",
+            "rule-title": "Ensure SELinux is installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.2_Ensure_SELinux_is_not_disabled_in_bootloader_configuration",
+            "rule-title": "Ensure SELinux is not disabled in bootloader configuration",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.3_Ensure_SELinux_policy_is_configured",
+            "rule-title": "Ensure SELinux policy is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.4_Ensure_the_SELinux_mode_is_not_disabled",
+            "rule-title": "Ensure the SELinux mode is not disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.5_Ensure_the_SELinux_mode_is_enforcing",
+            "rule-title": "Ensure the SELinux mode is enforcing",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.6_Ensure_no_unconfined_services_exist",
+            "rule-title": "Ensure no unconfined services exist",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.7_Ensure_SETroubleshoot_is_not_installed",
+            "rule-title": "Ensure SETroubleshoot is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.6.1.8_Ensure_the_MCS_Translation_Service_mcstrans_is_not_installed",
+            "rule-title": "Ensure the MCS Translation Service (mcstrans) is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.1_Ensure_message_of_the_day_is_configured_properly",
+            "rule-title": "Ensure message of the day is configured properly",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.2_Ensure_local_login_warning_banner_is_configured_properly",
+            "rule-title": "Ensure local login warning banner is configured properly",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.3_Ensure_remote_login_warning_banner_is_configured_properly",
+            "rule-title": "Ensure remote login warning banner is configured properly",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.4_Ensure_permissions_on_etcmotd_are_configured",
+            "rule-title": "Ensure permissions on /etc/motd are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.5_Ensure_permissions_on_etcissue_are_configured",
+            "rule-title": "Ensure permissions on /etc/issue are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.7.6_Ensure_permissions_on_etcissue.net_are_configured",
+            "rule-title": "Ensure permissions on /etc/issue.net are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.1_Ensure_GNOME_Display_Manager_is_removed",
+            "rule-title": "Ensure GNOME Display Manager is removed",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.2_Ensure_GDM_login_banner_is_configured",
+            "rule-title": "Ensure GDM login banner is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.3_Ensure_GDM_disable-user-list_option_is_enabled",
+            "rule-title": "Ensure GDM disable-user-list option is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.4_Ensure_GDM_screen_locks_when_the_user_is_idle",
+            "rule-title": "Ensure GDM screen locks when the user is idle",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.5_Ensure_GDM_screen_locks_cannot_be_overridden",
+            "rule-title": "Ensure GDM screen locks cannot be overridden",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.6_Ensure_GDM_automatic_mounting_of_removable_media_is_disabled",
+            "rule-title": "Ensure GDM automatic mounting of removable media is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.7_Ensure_GDM_disabling_automatic_mounting_of_removable_media_is_not_overridden",
+            "rule-title": "Ensure GDM disabling automatic mounting of removable media is not overridden",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.8_Ensure_GDM_autorun-never_is_enabled",
+            "rule-title": "Ensure GDM autorun-never is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.9_Ensure_GDM_autorun-never_is_not_overridden",
+            "rule-title": "Ensure GDM autorun-never is not overridden",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.8.10_Ensure_XDCMP_is_not_enabled",
+            "rule-title": "Ensure XDCMP is not enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.9_Ensure_updates_patches_and_additional_security_software_are_installed",
+            "rule-title": "Ensure updates, patches, and additional security software are installed",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_1.10_Ensure_system-wide_crypto_policy_is_not_legacy",
+            "rule-title": "Ensure system-wide crypto policy is not legacy",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.1.1_Ensure_time_synchronization_is_in_use",
+            "rule-title": "Ensure time synchronization is in use",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.1.2_Ensure_chrony_is_configured",
+            "rule-title": "Ensure chrony is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.1_Ensure_xorg-x11-server-common_is_not_installed",
+            "rule-title": "Ensure xorg-x11-server-common is not installed",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.2_Ensure_Avahi_Server_is_not_installed",
+            "rule-title": "Ensure Avahi Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.3_Ensure_CUPS_is_not_installed",
+            "rule-title": "Ensure CUPS is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.4_Ensure_DHCP_Server_is_not_installed",
+            "rule-title": "Ensure DHCP Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.5_Ensure_DNS_Server_is_not_installed",
+            "rule-title": "Ensure DNS Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.6_Ensure_VSFTP_Server_is_not_installed",
+            "rule-title": "Ensure VSFTP Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.7_Ensure_TFTP_Server_is_not_installed",
+            "rule-title": "Ensure TFTP Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.8_Ensure_a_web_server_is_not_installed",
+            "rule-title": "Ensure a web server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.9_Ensure_IMAP_and_POP3_server_is_not_installed",
+            "rule-title": "Ensure IMAP and POP3 server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.10_Ensure_Samba_is_not_installed",
+            "rule-title": "Ensure Samba is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.11_Ensure_HTTP_Proxy_Server_is_not_installed",
+            "rule-title": "Ensure HTTP Proxy Server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.12_Ensure_net-snmp_is_not_installed",
+            "rule-title": "Ensure net-snmp is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.13_Ensure_telnet-server_is_not_installed",
+            "rule-title": "Ensure telnet-server is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.14_Ensure_dnsmasq_is_not_installed",
+            "rule-title": "Ensure dnsmasq is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.15_Ensure_mail_transfer_agent_is_configured_for_local-only_mode",
+            "rule-title": "Ensure mail transfer agent is configured for local-only mode",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.16_Ensure_nfs-utils_is_not_installed_or_the__nfs-server_service_is_masked",
+            "rule-title": "Ensure nfs-utils is not installed or the  nfs-server service is masked",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.17_Ensure_rpcbind_is_not_installed_or_the__rpcbind_services_are_masked",
+            "rule-title": "Ensure rpcbind is not installed or the  rpcbind services are masked",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.2.18_Ensure_rsync-daemon_is_not_installed_or_the_rsyncd_service_is_masked",
+            "rule-title": "Ensure rsync-daemon is not installed or the rsyncd service is masked",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.3.1_Ensure_telnet_client_is_not_installed",
+            "rule-title": "Ensure telnet client is not installed",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.3.2_Ensure_LDAP_client_is_not_installed",
+            "rule-title": "Ensure LDAP client is not installed",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.3.3_Ensure_TFTP_client_is_not_installed",
+            "rule-title": "Ensure TFTP client is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.3.4_Ensure_FTP_client_is_not_installed",
+            "rule-title": "Ensure FTP client is not installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_2.4_Ensure_nonessential_services_listening_on_the_system_are_removed_or_masked",
+            "rule-title": "Ensure nonessential services listening on the system are removed or masked",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.1.1_Ensure_IPv6_status_is_identified",
+            "rule-title": "Ensure IPv6 status is identified",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.1.2_Ensure_wireless_interfaces_are_disabled",
+            "rule-title": "Ensure wireless interfaces are disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.1.3_Ensure_TIPC_is_disabled",
+            "rule-title": "Ensure TIPC is disabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.2.1_Ensure_IP_forwarding_is_disabled",
+            "rule-title": "Ensure IP forwarding is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.2.2_Ensure_packet_redirect_sending_is_disabled",
+            "rule-title": "Ensure packet redirect sending is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.1_Ensure_source_routed_packets_are_not_accepted",
+            "rule-title": "Ensure source routed packets are not accepted",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.2_Ensure_ICMP_redirects_are_not_accepted",
+            "rule-title": "Ensure ICMP redirects are not accepted",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.3_Ensure_secure_ICMP_redirects_are_not_accepted",
+            "rule-title": "Ensure secure ICMP redirects are not accepted",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.4_Ensure_suspicious_packets_are_logged",
+            "rule-title": "Ensure suspicious packets are logged",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.5_Ensure_broadcast_ICMP_requests_are_ignored",
+            "rule-title": "Ensure broadcast ICMP requests are ignored",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.6_Ensure_bogus_ICMP_responses_are_ignored",
+            "rule-title": "Ensure bogus ICMP responses are ignored",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.7_Ensure_Reverse_Path_Filtering_is_enabled",
+            "rule-title": "Ensure Reverse Path Filtering is enabled",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.8_Ensure_TCP_SYN_Cookies_is_enabled",
+            "rule-title": "Ensure TCP SYN Cookies is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.3.9_Ensure_IPv6_router_advertisements_are_not_accepted",
+            "rule-title": "Ensure IPv6 router advertisements are not accepted",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.1.1_Ensure_nftables_is_installed",
+            "rule-title": "Ensure nftables is installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.1.2_Ensure_a_single_firewall_configuration_utility_is_in_use",
+            "rule-title": "Ensure a single firewall configuration utility is in use",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.1_Ensure_firewalld_default_zone_is_set",
+            "rule-title": "Ensure firewalld default zone is set",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.2_Ensure_at_least_one_nftables_table_exists",
+            "rule-title": "Ensure at least one nftables table exists",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.3_Ensure_nftables_base_chains_exist",
+            "rule-title": "Ensure nftables base chains exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.4_Ensure_host_based_firewall_loopback_traffic_is_configured",
+            "rule-title": "Ensure host based firewall loopback traffic is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.5_Ensure_firewalld_drops_unnecessary_services_and_ports",
+            "rule-title": "Ensure firewalld drops unnecessary services and ports",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.6_Ensure_nftables_established_connections_are_configured",
+            "rule-title": "Ensure nftables established connections are configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_3.4.2.7_Ensure_nftables_default_deny_firewall_policy",
+            "rule-title": "Ensure nftables default deny firewall policy",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.1.1_Ensure_auditd_is_installed",
+            "rule-title": "Ensure auditd is installed",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.1.2_Ensure_auditing_for_processes_that_start_prior_to_auditd_is_enabled",
+            "rule-title": "Ensure auditing for processes that start prior to auditd is enabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.1.3_Ensure_audit_backlog_limit_is_sufficient",
+            "rule-title": "Ensure audit_backlog_limit is sufficient",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.1.4_Ensure_auditd_service_is_enabled",
+            "rule-title": "Ensure auditd service is enabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.2.1_Ensure_audit_log_storage_size_is_configured",
+            "rule-title": "Ensure audit log storage size is configured",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.2.2_Ensure_audit_logs_are_not_automatically_deleted",
+            "rule-title": "Ensure audit logs are not automatically deleted",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.2.3_Ensure_system_is_disabled_when_audit_logs_are_full",
+            "rule-title": "Ensure system is disabled when audit logs are full",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.1_Ensure_changes_to_system_administration_scope_sudoers_is_collected",
+            "rule-title": "Ensure changes to system administration scope (sudoers) is collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.2_Ensure_actions_as_another_user_are_always_logged",
+            "rule-title": "Ensure actions as another user are always logged",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.3_Ensure_events_that_modify_the_sudo_log_file_are_collected",
+            "rule-title": "Ensure events that modify the sudo log file are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.4_Ensure_events_that_modify_date_and_time_information_are_collected",
+            "rule-title": "Ensure events that modify date and time information are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.5_Ensure_events_that_modify_the_systems_network_environment_are_collected",
+            "rule-title": "Ensure events that modify the system's network environment are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.6_Ensure_use_of_privileged_commands_are_collected",
+            "rule-title": "Ensure use of privileged commands are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.7_Ensure_unsuccessful_file_access_attempts_are_collected",
+            "rule-title": "Ensure unsuccessful file access attempts are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.8_Ensure_events_that_modify_usergroup_information_are_collected",
+            "rule-title": "Ensure events that modify user/group information are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.9_Ensure_discretionary_access_control_permission_modification_events_are_collected",
+            "rule-title": "Ensure discretionary access control permission modification events are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.10_Ensure_successful_file_system_mounts_are_collected",
+            "rule-title": "Ensure successful file system mounts are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.11_Ensure_session_initiation_information_is_collected",
+            "rule-title": "Ensure session initiation information is collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.12_Ensure_login_and_logout_events_are_collected",
+            "rule-title": "Ensure login and logout events are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.13_Ensure_file_deletion_events_by_users_are_collected",
+            "rule-title": "Ensure file deletion events by users are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.14_Ensure_events_that_modify_the_systems_Mandatory_Access_Controls_are_collected",
+            "rule-title": "Ensure events that modify the system's Mandatory Access Controls are collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.15_Ensure_successful_and_unsuccessful_attempts_to_use_the_chcon_command_are_recorded",
+            "rule-title": "Ensure successful and unsuccessful attempts to use the chcon command are recorded",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.16_Ensure_successful_and_unsuccessful_attempts_to_use_the_setfacl_command_are_recorded",
+            "rule-title": "Ensure successful and unsuccessful attempts to use the setfacl command are recorded",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.17_Ensure_successful_and_unsuccessful_attempts_to_use_the_chacl_command_are_recorded",
+            "rule-title": "Ensure successful and unsuccessful attempts to use the chacl command are recorded",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.18_Ensure_successful_and_unsuccessful_attempts_to_use_the_usermod_command_are_recorded",
+            "rule-title": "Ensure successful and unsuccessful attempts to use the usermod command are recorded",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.19_Ensure_kernel_module_loading_unloading_and_modification_is_collected",
+            "rule-title": "Ensure kernel module loading unloading and modification is collected",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.20_Ensure_the_audit_configuration_is_immutable",
+            "rule-title": "Ensure the audit configuration is immutable",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3.21_Ensure_the_running_and_on_disk_configuration_is_the_same",
+            "rule-title": "Ensure the running and on disk configuration is the same",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.1_Ensure_audit_log_files_are_mode_0640_or_less_permissive",
+            "rule-title": "Ensure audit log files are mode 0640 or less permissive",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.2_Ensure_only_authorized_users_own_audit_log_files",
+            "rule-title": "Ensure only authorized users own audit log files",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.3_Ensure_only_authorized_groups_are_assigned_ownership_of_audit_log_files",
+            "rule-title": "Ensure only authorized groups are assigned ownership of audit log files",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.4_Ensure_the_audit_log_directory_is_0750_or_more_restrictive",
+            "rule-title": "Ensure the audit log directory is 0750 or more restrictive",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.5_Ensure_audit_configuration_files_are_640_or_more_restrictive",
+            "rule-title": "Ensure audit configuration files are 640 or more restrictive",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.6_Ensure_audit_configuration_files_are_owned_by_root",
+            "rule-title": "Ensure audit configuration files are owned by root",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.7_Ensure_audit_configuration_files_belong_to_group_root",
+            "rule-title": "Ensure audit configuration files belong to group root",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.8_Ensure_audit_tools_are_755_or_more_restrictive",
+            "rule-title": "Ensure audit tools are 755 or more restrictive",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.9_Ensure_audit_tools_are_owned_by_root",
+            "rule-title": "Ensure audit tools are owned by root",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.1.4.10_Ensure_audit_tools_belong_to_group_root",
+            "rule-title": "Ensure audit tools belong to group root",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.1_Ensure_rsyslog_is_installed",
+            "rule-title": "Ensure rsyslog is installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.2_Ensure_rsyslog_service_is_enabled",
+            "rule-title": "Ensure rsyslog service is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.3_Ensure_journald_is_configured_to_send_logs_to_rsyslog",
+            "rule-title": "Ensure journald is configured to send logs to rsyslog",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.4_Ensure_rsyslog_default_file_permissions_are_configured",
+            "rule-title": "Ensure rsyslog default file permissions are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.5_Ensure_logging_is_configured",
+            "rule-title": "Ensure logging is configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.6_Ensure_rsyslog_is_configured_to_send_logs_to_a_remote_log_host",
+            "rule-title": "Ensure rsyslog is configured to send logs to a remote log host",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1.7_Ensure_rsyslog_is_not_configured_to_receive_logs_from_a_remote_client",
+            "rule-title": "Ensure rsyslog is not configured to receive logs from a remote client",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.1.1_Ensure_systemd-journal-remote_is_installed",
+            "rule-title": "Ensure systemd-journal-remote is installed",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.1.2_Ensure_systemd-journal-remote_is_configured",
+            "rule-title": "Ensure systemd-journal-remote is configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.1.3_Ensure_systemd-journal-remote_is_enabled",
+            "rule-title": "Ensure systemd-journal-remote is enabled",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.1.4_Ensure_journald_is_not_configured_to_receive_logs_from_a_remote_client",
+            "rule-title": "Ensure journald is not configured to receive logs from a remote client",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.2_Ensure_journald_service_is_enabled",
+            "rule-title": "Ensure journald service is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.3_Ensure_journald_is_configured_to_compress_large_log_files",
+            "rule-title": "Ensure journald is configured to compress large log files",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.4_Ensure_journald_is_configured_to_write_logfiles_to_persistent_disk",
+            "rule-title": "Ensure journald is configured to write logfiles to persistent disk",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.5_Ensure_journald_is_not_configured_to_send_logs_to_rsyslog",
+            "rule-title": "Ensure journald is not configured to send logs to rsyslog",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.6_Ensure_journald_log_rotation_is_configured_per_site_policy",
+            "rule-title": "Ensure journald log rotation is configured per site policy",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2.7_Ensure_journald_default_file_permissions_configured",
+            "rule-title": "Ensure journald default file permissions configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.2.3_Ensure_all_logfiles_have_appropriate_permissions_and_ownership",
+            "rule-title": "Ensure all logfiles have appropriate permissions and ownership",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_4.3_Ensure_logrotate_is_configured",
+            "rule-title": "Ensure logrotate is configured",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.1_Ensure_cron_daemon_is_enabled",
+            "rule-title": "Ensure cron daemon is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.2_Ensure_permissions_on_etccrontab_are_configured",
+            "rule-title": "Ensure permissions on /etc/crontab are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.3_Ensure_permissions_on_etccron.hourly_are_configured",
+            "rule-title": "Ensure permissions on /etc/cron.hourly are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.4_Ensure_permissions_on_etccron.daily_are_configured",
+            "rule-title": "Ensure permissions on /etc/cron.daily are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.5_Ensure_permissions_on_etccron.weekly_are_configured",
+            "rule-title": "Ensure permissions on /etc/cron.weekly are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.6_Ensure_permissions_on_etccron.monthly_are_configured",
+            "rule-title": "Ensure permissions on /etc/cron.monthly are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.7_Ensure_permissions_on_etccron.d_are_configured",
+            "rule-title": "Ensure permissions on /etc/cron.d are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.8_Ensure_cron_is_restricted_to_authorized_users",
+            "rule-title": "Ensure cron is restricted to authorized users",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.1.9_Ensure_at_is_restricted_to_authorized_users",
+            "rule-title": "Ensure at is restricted to authorized users",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.1_Ensure_permissions_on_etcsshsshd_config_are_configured",
+            "rule-title": "Ensure permissions on /etc/ssh/sshd_config are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.2_Ensure_permissions_on_SSH_private_host_key_files_are_configured",
+            "rule-title": "Ensure permissions on SSH private host key files are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.3_Ensure_permissions_on_SSH_public_host_key_files_are_configured",
+            "rule-title": "Ensure permissions on SSH public host key files are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.4_Ensure_SSH_access_is_limited",
+            "rule-title": "Ensure SSH access is limited",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.5_Ensure_SSH_LogLevel_is_appropriate",
+            "rule-title": "Ensure SSH LogLevel is appropriate",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.6_Ensure_SSH_PAM_is_enabled",
+            "rule-title": "Ensure SSH PAM is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.7_Ensure_SSH_root_login_is_disabled",
+            "rule-title": "Ensure SSH root login is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.8_Ensure_SSH_HostbasedAuthentication_is_disabled",
+            "rule-title": "Ensure SSH HostbasedAuthentication is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.9_Ensure_SSH_PermitEmptyPasswords_is_disabled",
+            "rule-title": "Ensure SSH PermitEmptyPasswords is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.10_Ensure_SSH_PermitUserEnvironment_is_disabled",
+            "rule-title": "Ensure SSH PermitUserEnvironment is disabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.11_Ensure_SSH_IgnoreRhosts_is_enabled",
+            "rule-title": "Ensure SSH IgnoreRhosts is enabled",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.12_Ensure_SSH_X11_forwarding_is_disabled",
+            "rule-title": "Ensure SSH X11 forwarding is disabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.13_Ensure_SSH_AllowTcpForwarding_is_disabled",
+            "rule-title": "Ensure SSH AllowTcpForwarding is disabled",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.14_Ensure_system-wide_crypto_policy_is_not_over-ridden",
+            "rule-title": "Ensure system-wide crypto policy is not over-ridden",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.15_Ensure_SSH_warning_banner_is_configured",
+            "rule-title": "Ensure SSH warning banner is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.16_Ensure_SSH_MaxAuthTries_is_set_to_4_or_less",
+            "rule-title": "Ensure SSH MaxAuthTries is set to 4 or less",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.17_Ensure_SSH_MaxStartups_is_configured",
+            "rule-title": "Ensure SSH MaxStartups is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.18_Ensure_SSH_MaxSessions_is_set_to_10_or_less",
+            "rule-title": "Ensure SSH MaxSessions is set to 10 or less",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.19_Ensure_SSH_LoginGraceTime_is_set_to_one_minute_or_less",
+            "rule-title": "Ensure SSH LoginGraceTime is set to one minute or less",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.2.20_Ensure_SSH_Idle_Timeout_Interval_is_configured",
+            "rule-title": "Ensure SSH Idle Timeout Interval is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.1_Ensure_sudo_is_installed",
+            "rule-title": "Ensure sudo is installed",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.2_Ensure_sudo_commands_use_pty",
+            "rule-title": "Ensure sudo commands use pty",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.3_Ensure_sudo_log_file_exists",
+            "rule-title": "Ensure sudo log file exists",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.4_Ensure_users_must_provide_password_for_escalation",
+            "rule-title": "Ensure users must provide password for escalation",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.5_Ensure_re-authentication_for_privilege_escalation_is_not_disabled_globally",
+            "rule-title": "Ensure re-authentication for privilege escalation is not disabled globally",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.6_Ensure_sudo_authentication_timeout_is_configured_correctly",
+            "rule-title": "Ensure sudo authentication timeout is configured correctly",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.3.7_Ensure_access_to_the_su_command_is_restricted",
+            "rule-title": "Ensure access to the su command is restricted",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.4.1_Ensure_custom_authselect_profile_is_used",
+            "rule-title": "Ensure custom authselect profile is used",
+            "result": "informational"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.4.2_Ensure_authselect_includes_with-faillock",
+            "rule-title": "Ensure authselect includes with-faillock",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.5.1_Ensure_password_creation_requirements_are_configured",
+            "rule-title": "Ensure password creation requirements are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.5.2_Ensure_lockout_for_failed_password_attempts_is_configured",
+            "rule-title": "Ensure lockout for failed password attempts is configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.5.3_Ensure_password_reuse_is_limited",
+            "rule-title": "Ensure password reuse is limited",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.5.4_Ensure_password_hashing_algorithm_is_SHA-512_or_yescrypt",
+            "rule-title": "Ensure password hashing algorithm is SHA-512 or yescrypt",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.1.1_Ensure_password_expiration_is_365_days_or_less",
+            "rule-title": "Ensure password expiration is 365 days or less",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.1.2_Ensure_minimum_days_between_password_changes_is__configured",
+            "rule-title": "Ensure minimum days between password changes is  configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.1.3_Ensure_password_expiration_warning_days_is_7_or_more",
+            "rule-title": "Ensure password expiration warning days is 7 or more",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.1.4_Ensure_inactive_password_lock_is_30_days_or_less",
+            "rule-title": "Ensure inactive password lock is 30 days or less",
+            "result": "fail"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.1.5_Ensure_all_users_last_password_change_date_is_in_the_past",
+            "rule-title": "Ensure all users last password change date is in the past",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.2_Ensure_system_accounts_are_secured",
+            "rule-title": "Ensure system accounts are secured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.3_Ensure_default_user_shell_timeout_is_900_seconds_or_less",
+            "rule-title": "Ensure default user shell timeout is 900 seconds or less",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.4_Ensure_default_group_for_the_root_account_is_GID_0",
+            "rule-title": "Ensure default group for the root account is GID 0",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.5_Ensure_default_user_umask_is_027_or_more_restrictive",
+            "rule-title": "Ensure default user umask is 027 or more restrictive",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_5.6.6_Ensure_root_password_is_set",
+            "rule-title": "Ensure root password is set",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.1_Ensure_permissions_on_etcpasswd_are_configured",
+            "rule-title": "Ensure permissions on /etc/passwd are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.2_Ensure_permissions_on_etcpasswd-_are_configured",
+            "rule-title": "Ensure permissions on /etc/passwd- are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.3_Ensure_permissions_on_etcgroup_are_configured",
+            "rule-title": "Ensure permissions on /etc/group are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.4_Ensure_permissions_on_etcgroup-_are_configured",
+            "rule-title": "Ensure permissions on /etc/group- are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.5_Ensure_permissions_on_etcshadow_are_configured",
+            "rule-title": "Ensure permissions on /etc/shadow are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.6_Ensure_permissions_on_etcshadow-_are_configured",
+            "rule-title": "Ensure permissions on /etc/shadow- are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.7_Ensure_permissions_on_etcgshadow_are_configured",
+            "rule-title": "Ensure permissions on /etc/gshadow are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.8_Ensure_permissions_on_etcgshadow-_are_configured",
+            "rule-title": "Ensure permissions on /etc/gshadow- are configured",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.9_Ensure_no_world_writable_files_exist",
+            "rule-title": "Ensure no world writable files exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.10_Ensure_no_unowned_files_or_directories_exist",
+            "rule-title": "Ensure no unowned files or directories exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.11_Ensure_no_ungrouped_files_or_directories_exist",
+            "rule-title": "Ensure no ungrouped files or directories exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.12_Ensure_sticky_bit_is_set_on_all_world-writable_directories",
+            "rule-title": "Ensure sticky bit is set on all world-writable directories",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.13_Audit_SUID_executables",
+            "rule-title": "Audit SUID executables",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.14_Audit_SGID_executables",
+            "rule-title": "Audit SGID executables",
+            "result": "notchecked"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.1.15_Audit_system_file_permissions",
+            "rule-title": "Audit system file permissions",
+            "result": "notselected"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.1_Ensure_accounts_in_etcpasswd_use_shadowed_passwords",
+            "rule-title": "Ensure accounts in /etc/passwd use shadowed passwords",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.2_Ensure_etcshadow_password_fields_are_not_empty",
+            "rule-title": "Ensure /etc/shadow password fields are not empty",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.3_Ensure_all_groups_in_etcpasswd_exist_in_etcgroup",
+            "rule-title": "Ensure all groups in /etc/passwd exist in /etc/group",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.4_Ensure_no_duplicate_UIDs_exist",
+            "rule-title": "Ensure no duplicate UIDs exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.5_Ensure_no_duplicate_GIDs_exist",
+            "rule-title": "Ensure no duplicate GIDs exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.6_Ensure_no_duplicate_user_names_exist",
+            "rule-title": "Ensure no duplicate user names exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.7_Ensure_no_duplicate_group_names_exist",
+            "rule-title": "Ensure no duplicate group names exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.8_Ensure_root_PATH_Integrity",
+            "rule-title": "Ensure root PATH Integrity",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.9_Ensure_root_is_the_only_UID_0_account",
+            "rule-title": "Ensure root is the only UID 0 account",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.10_Ensure_local_interactive_user_home_directories_exist",
+            "rule-title": "Ensure local interactive user home directories exist",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.11_Ensure_local_interactive_users_own_their_home_directories",
+            "rule-title": "Ensure local interactive users own their home directories",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.12_Ensure_local_interactive_user_home_directories_are_mode_750_or_more_restrictive",
+            "rule-title": "Ensure local interactive user home directories are mode 750 or more restrictive",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.13_Ensure_no_local_interactive_user_has_.netrc_files",
+            "rule-title": "Ensure no local interactive user has .netrc files",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.14_Ensure_no_local_interactive_user_has_.forward_files",
+            "rule-title": "Ensure no local interactive user has .forward files",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.15_Ensure_no_local_interactive_user_has_.rhosts_files",
+            "rule-title": "Ensure no local interactive user has .rhosts files",
+            "result": "pass"
+        },
+        {
+            "rule-id": "xccdf_org.cisecurity.benchmarks_rule_6.2.16_Ensure_local_interactive_user_dot_files_are_not_group_or_world_writable",
+            "rule-title": "Ensure local interactive user dot files are not group or world writable",
+            "result": "pass"
+        }
+    ]
+}
